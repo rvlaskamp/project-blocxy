@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { LibUiRootComponent } from '@blocxy-project/lib-ui';
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, LibUiRootComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  host: {
+    class: 'contents',
+  },
 })
-export class AppComponent {
-  title = 'test';
-}
+export class AppComponent {}

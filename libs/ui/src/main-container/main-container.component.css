@@ -1,0 +1,5 @@
+:host {
+  display: block;
+  height: 100%;
+  padding-top: var(--size-header-height);
+}

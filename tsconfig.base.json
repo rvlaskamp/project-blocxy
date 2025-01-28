@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@blocxy-project/lib-ui": ["libs/ui/src/index.ts"],
+      "@blocxy-project/lib-ui-styles": ["libs/ui/src/index.css"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

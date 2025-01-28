@@ -1,0 +1,6 @@
+@layer tokens {
+  :root {
+    --size-spacing-app-x: 4rem;
+    --size-header-height: 4rem;
+  }
+}
