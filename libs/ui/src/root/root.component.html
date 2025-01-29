@@ -1,2 +1,4 @@
-<div class="root"><ng-content></ng-content></div>
+<div class="root" [class.is-visible]="contentVisible()">
+  <ng-content></ng-content>
+</div>
 <lib-ui-root-bg></lib-ui-root-bg>

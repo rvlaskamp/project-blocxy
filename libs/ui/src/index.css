@@ -1,5 +1,8 @@
-@import './styles/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import './styles/tokens.css';
+@import './styles/reset.css';
+@import './styles/root.css';
+@import './styles/components.css';
 @import './styles/utils.css';
 
-@layer reset, tokens, utils;
+@layer tokens, reset, root, components, utils;

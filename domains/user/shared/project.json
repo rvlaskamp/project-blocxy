@@ -1,0 +1,26 @@
+{
+  "name": "DomainUserShared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/user/shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/domains/user/shared",
+        "main": "domains/user/shared/src/index.ts",
+        "tsConfig": "domains/user/shared/tsconfig.lib.json",
+        "assets": ["domains/user/shared/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "domains/user/shared/jest.config.ts"
+      }
+    }
+  }
+}

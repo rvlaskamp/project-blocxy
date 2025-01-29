@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  background: #fff;
+  width: 50vw;
+}
+
+.dialog-content {
+  padding: 1rem;
+}
