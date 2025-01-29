@@ -1,0 +1,8 @@
+@layer tokens {
+  :root {
+    --duration-fast: 0.1s;
+    --duration-standard: 0.25s;
+    --duration-slower: 0.5s;
+    --easing-standard: ease-in-out;
+  }
+}

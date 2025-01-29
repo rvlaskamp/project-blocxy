@@ -1,0 +1,43 @@
+@layer tokens {
+  :root {
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-surface-app: #f0f2fc;
+    --color-surface-content: hsla(from var(--color-white) h s l / 85%);
+    --color-surface-content-secondary: hsl(from var(--color-white) h s l / 85%);
+    --color-surface-action: #2f41f4;
+    --color-surface-action-hover: hsl(
+      from var(--color-surface-action) h s calc(l - 15)
+    );
+    --color-surface-action-active: hsl(
+      from var(--color-surface-action) h s calc(l + 5)
+    );
+
+    --color-surface-action-secondary: #07138c;
+    --color-surface-action-tertiary: hsl(
+      from var(--color-surface-action-secondary) h s l / 80%
+    );
+
+    --color-surface-field: #fff;
+
+    --color-on-content: #151619;
+    --color-on-content-muted: #60626d;
+    --color-on-action: #f2f3f4;
+    --color-on-action-secondary: var(--color-on-action);
+    --color-on-action-tertiary: #07138c;
+    --color-on-action-tertiary-muted: hsl(from #151619 h s l / 85%);
+
+    --color-text-primary: #13141d;
+    --color-text-secondary: #07138c;
+    --color-text-secondary-muted: hsl(
+      from var(--color-text-secondary) h s l / 65%
+    );
+
+    --color-border: #cad2fa;
+    --color-border-secondary: #b2bffd;
+    --color-border-focus: #8c9be8;
+
+    --color-border-error: #cb1313;
+  }
+}

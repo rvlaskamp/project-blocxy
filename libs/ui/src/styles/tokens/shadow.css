@@ -1,0 +1,7 @@
+@layer tokens {
+  :root {
+    --shadow-content: 0 4px 16px 0 hsl(from var(--color-black) h s l / 10%);
+    --shadow-content-secondary: 0 2px 16px 0
+      hsl(from var(--color-black) h s l / 12%);
+  }
+}

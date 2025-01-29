@@ -1,0 +1,42 @@
+@layer components {
+  .field {
+    position: relative;
+    background: var(--color-surface-field);
+    height: var(--size-field-height);
+    border: 2px solid var(--border-color, var(--color-border));
+    border-radius: var(--border-radius-base);
+    padding: 0.1rem 0.5rem;
+
+    &:has(.ng-touched.ng-invalid) {
+      --border-color: var(--color-border-error);
+    }
+
+    &:has(input:focus, input.ng-touched:focus) {
+      --border-color: var(--color-border-focus);
+    }
+
+    label {
+      position: absolute;
+      font-size: 0.75rem;
+      font-weight: var(--font-bold);
+      color: var(--color-on-content-muted);
+    }
+
+    input {
+      border: 0;
+      background: none;
+      width: 100%;
+      height: 100%;
+      padding-top: 0.75rem;
+      font-weight: var(--font-medium);
+
+      &::placeholder {
+        color: var(--color-on-content-muted);
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
