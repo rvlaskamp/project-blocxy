@@ -23,6 +23,7 @@
       "@blocxy-project/FeatureAuthWebApp": [
         "features/auth/web-app/src/index.ts"
       ],
+      "@blocxy-project/blocx-home": ["features/blocx-home/src/index.ts"],
       "@blocxy-project/lib-ui": ["libs/ui/src/index.ts"],
       "@blocxy-project/lib-ui-styles": ["libs/ui/src/index.css"]
     }

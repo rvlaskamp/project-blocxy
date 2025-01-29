@@ -1,4 +1,6 @@
 <lib-ui-root [contentVisible]="rootVisible()">
   <router-outlet></router-outlet>
 </lib-ui-root>
+@if (!authInitializing()) {
 <ftr-auth-dialog></ftr-auth-dialog>
+}

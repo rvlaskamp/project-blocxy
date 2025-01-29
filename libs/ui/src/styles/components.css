@@ -44,13 +44,14 @@
 
   .title {
     font-weight: var(--font-bold);
-    font-size: var(--font-size-title);
+    font-size: var(--title-size, var(--font-size-title));
   }
 
   .subtitle {
     font-weight: var(--font-medium);
-    font-size: var(--font-size-subtitle);
+    font-size: var(--subtitle-size, var(--font-size-subtitle));
     color: var(--color-on-content-muted);
+    max-width: 30ch;
   }
 
   .field {

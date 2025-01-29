@@ -1,9 +1,10 @@
 @layer tokens {
   :root {
+    --color-white: #fff;
     --color-black: #000;
 
     --color-surface-app: #f0f2fc;
-    --color-surface-content: hsl(from var(--color-white) h s l / 65%);
+    --color-surface-content: hsla(from var(--color-white) h s l / 85%);
     --color-surface-content-secondary: hsl(from var(--color-white) h s l / 85%);
     --color-surface-action: #2f41f4;
     --color-surface-action-hover: hsl(
@@ -46,7 +47,7 @@
 
     /** SIZES */
 
-    --size-spacing-app-x: 4rem;
+    --size-spacing-app-x: 5vw;
     --size-header-height: 4rem;
     --size-field-height: 3.125rem;
 
@@ -69,6 +70,7 @@
 
     /** BORDERS */
     --border-radius-base: 0.5rem;
+    --border-radius-large: 1.5rem;
     --border-base: 1px solid var(--color-border);
     --border-secondary: 1px solid var(--color-border-secondary);
   }

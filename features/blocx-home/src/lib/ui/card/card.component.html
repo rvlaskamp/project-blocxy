@@ -1,0 +1,21 @@
+<div class="card-header">
+  <div class="card-title">
+    <ng-content select="[card-title-content]">
+      {{ cardTitle() }}
+    </ng-content>
+  </div>
+
+  @if (enabled()) {
+  <div class="card-actions"></div>
+  }
+</div>
+<div class="card-content">
+  @if (showPlaceholder()) {
+  <div class="card-placeholder">
+    <hgroup class="title-group">
+      <h1 class="title">{{ cardPlaceholderTitle() }}</h1>
+      <h2 class="subtitle">{{ cardPlaceholderSubtitle() }}</h2>
+    </hgroup>
+  </div>
+  }
+</div>

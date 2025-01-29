@@ -21,7 +21,16 @@ import { FeatureAuthService } from '../../services/auth/auth.service';
 export class FeatureAuthDialogComponent {
   #authService = inject(FeatureAuthService);
 
-  dialogVisible = computed(() => !this.#authService.authenticated());
+  dialogVisible = computed(() => {
+    const initializing = this.#authService.initializing();
+    const authenticated = this.#authService.authenticated();
+
+    if (initializing) {
+      return false;
+    }
+
+    return !authenticated;
+  });
 
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),

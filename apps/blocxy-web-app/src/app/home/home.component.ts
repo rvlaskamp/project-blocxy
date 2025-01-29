@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FtrBlocxHomeComponent } from '@blocxy-project/blocx-home';
 import {
   LibUiHeaderComponent,
   LibUiLogoComponent,
@@ -14,6 +15,7 @@ import {
     LibUiHeaderComponent,
     LibUiLogoComponent,
     LibUiMainContainerComponent,
+    FtrBlocxHomeComponent,
   ],
   host: {
     class: 'contents',

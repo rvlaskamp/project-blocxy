@@ -1,19 +1,32 @@
 import { computed, Injectable, signal } from '@angular/core';
 
+enum AuthStatus {
+  Init,
+  SignedIn,
+  SignedOut,
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class FeatureAuthService {
-  #authenticated = signal(false);
-  get authenticated() {
-    return computed(() => this.#authenticated());
+  #status = signal(AuthStatus.Init);
+
+  authenticated = computed(() => this.#status() === AuthStatus.SignedIn);
+  initializing = computed(() => this.#status() === AuthStatus.Init);
+
+  checkAuthStatus() {
+    // TODO - Call API to validate JWT token in HttpOnly Cookie
+    setTimeout(() => {
+      this.#status.set(AuthStatus.SignedOut);
+    }, 2000);
   }
 
   signin() {
-    this.#authenticated.set(true);
+    this.#status.set(AuthStatus.SignedIn);
   }
 
   signout() {
-    this.#authenticated.set(false);
+    this.#status.set(AuthStatus.SignedOut);
   }
 }

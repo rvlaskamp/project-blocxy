@@ -5,7 +5,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: 0;
-    transition: all var(--duration-slower) var(--easing-standard);
+    transition: all var(--duration-standard) var(--easing-standard);
     &.is-visible {
       opacity: 1;
       visibility: visible;

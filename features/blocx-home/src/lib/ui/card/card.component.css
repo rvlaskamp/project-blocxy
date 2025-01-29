@@ -1,0 +1,40 @@
+:host {
+  background: var(--color-surface-content);
+  width: 85vw;
+  height: 100%;
+  border: var(--border-base);
+  border-radius: var(--border-radius-large);
+  filter: drop-shadow(var(--shadow-content));
+  overflow: hidden;
+}
+
+.card-header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1.5rem;
+  background: var(--color-surface-content);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-bold);
+  color: var(--color-on-content-muted);
+}
+
+.card-content {
+  display: flex;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.card-placeholder {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  :host {
+    width: 100%;
+  }
+}
