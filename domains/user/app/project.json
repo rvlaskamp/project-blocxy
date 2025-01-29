@@ -1,8 +1,8 @@
 {
-  "name": "DomainUserApp",
+  "name": "dmn-user-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "domains/user/app/src",
-  "prefix": "lib",
+  "prefix": "dmn-user-app",
   "projectType": "library",
   "tags": [],
   "targets": {

@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import {
   FeatureAuthDialogComponent,
   FeatureAuthService,
-} from '@blocxy-project/FeatureAuthWebApp';
+} from '@blocxy-project/ftr-auth-app';
 import { LibUiRootComponent } from '@blocxy-project/lib-ui';
 
 @Component({

@@ -15,14 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@blocxy-project/DomainUserApp": ["domains/user/app/src/index.ts"],
-      "@blocxy-project/DomainUserShared": ["domains/user/shared/src/index.ts"],
-      "@blocxy-project/FeatureAuthShared": [
-        "features/auth/shared/src/index.ts"
-      ],
-      "@blocxy-project/FeatureAuthWebApp": [
-        "features/auth/web-app/src/index.ts"
-      ],
+      "@blocxy-project/dmn-user-app": ["domains/user/app/src/index.ts"],
+      "@blocxy-project/dmn-user-shared": ["domains/user/shared/src/index.ts"],
+      "@blocxy-project/ftr-auth-shared": ["features/auth/shared/src/index.ts"],
+      "@blocxy-project/ftr-auth-app": ["features/auth/app/src/index.ts"],
       "@blocxy-project/blocx-home": ["features/blocx-home/src/index.ts"],
       "@blocxy-project/lib-ui": ["libs/ui/src/index.ts"],
       "@blocxy-project/lib-ui-styles": ["libs/ui/src/index.css"]

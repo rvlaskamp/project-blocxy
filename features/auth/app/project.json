@@ -1,5 +1,5 @@
 {
-  "name": "FeatureAuthWebApp",
+  "name": "ftr-auth-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "features/auth/web-app/src",
   "prefix": "ftr-auth",

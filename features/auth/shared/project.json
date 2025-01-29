@@ -1,5 +1,5 @@
 {
-  "name": "FeatureAuthShared",
+  "name": "ftr-auth-shared",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "features/auth/shared/src",
   "projectType": "library",
