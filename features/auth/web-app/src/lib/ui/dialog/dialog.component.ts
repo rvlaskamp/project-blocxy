@@ -1,28 +1,39 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { LibUiLogoComponent } from '@blocxy-project/lib-ui';
 import { FeatureAuthService } from '../../services/auth/auth.service';
 
-enum AuthSteps {
-  welcome,
-  signup,
-  done,
-}
-
 @Component({
   selector: 'ftr-auth-dialog',
-  imports: [LibUiLogoComponent],
+  imports: [LibUiLogoComponent, ReactiveFormsModule],
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.css',
+  host: {
+    '[class.is-visible]': 'dialogVisible()',
+    '[class.is-hidden]': '!dialogVisible()',
+  },
 })
 export class FeatureAuthDialogComponent {
   #authService = inject(FeatureAuthService);
 
-  showDialog = computed(() => !this.#authService.authenticated());
-  activeAuthStep = signal(AuthSteps.welcome);
+  dialogVisible = computed(() => !this.#authService.authenticated());
 
-  welcomeStepActive = computed(
-    () => this.activeAuthStep() === AuthSteps.welcome
-  );
-  signupStepActive = computed(() => this.activeAuthStep() === AuthSteps.signup);
-  doneStepActive = computed(() => this.activeAuthStep() === AuthSteps.done);
+  form = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
+
+  signin() {
+    if (!this.form.valid) {
+      this.form.markAllAsTouched();
+
+      return;
+    }
+
+    this.#authService.signin();
+  }
 }

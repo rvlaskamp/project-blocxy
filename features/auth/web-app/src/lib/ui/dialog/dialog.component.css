@@ -1,6 +1,31 @@
 :host {
+  --transition: var(--duration-slower);
+  display: block;
   position: fixed;
   inset: 0;
+  opacity: 0;
+  transition: all var(--transition) var(--easing-standard);
+}
+
+:host(.is-visible) {
+  opacity: 1;
+  visibility: visible;
+
+  .container {
+    translate: 0 0;
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+}
+
+:host(.is-hidden) {
+  opacity: 0;
+  visibility: hidden;
+
+  .container {
+    translate: 0 -10%;
+    opacity: 0;
+  }
 }
 
 .container {
@@ -12,14 +37,24 @@
   width: 100%;
   height: 100%;
   gap: 4rem;
+  opacity: 0;
+  transition: all var(--transition) var(--easing-standard);
 }
 
 .logo {
   --logo-size: 6rem;
 }
 
-.step {
-  display: grid;
-  place-items: center;
-  gap: 2rem;
+.btn-action {
+  min-width: 16rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  min-width: 18rem;
 }

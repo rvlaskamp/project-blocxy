@@ -18,6 +18,8 @@
       from var(--color-surface-action-secondary) h s l / 80%
     );
 
+    --color-surface-field: #fff;
+
     --color-on-content: #151619;
     --color-on-content-muted: #60626d;
     --color-on-action: #f2f3f4;
@@ -33,6 +35,9 @@
 
     --color-border: #cad2fa;
     --color-border-secondary: #b2bffd;
+    --color-border-focus: #8c9be8;
+
+    --color-border-error: #cb1313;
 
     /** SHADOWS */
     --shadow-content: 0 4px 16px 0 hsl(from var(--color-black) h s l / 10%);
@@ -43,6 +48,7 @@
 
     --size-spacing-app-x: 4rem;
     --size-header-height: 4rem;
+    --size-field-height: 3.125rem;
 
     /** FONT */
     --font-app: 'Figtree';
@@ -57,6 +63,13 @@
 
     /** TRANSITIONS */
     --duration-fast: 0.1s;
+    --duration-standard: 0.25s;
+    --duration-slower: 0.5s;
     --easing-standard: ease-in-out;
+
+    /** BORDERS */
+    --border-radius-base: 0.5rem;
+    --border-base: 1px solid var(--color-border);
+    --border-secondary: 1px solid var(--color-border-secondary);
   }
 }

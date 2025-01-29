@@ -3,14 +3,23 @@
     <lib-ui-logo></lib-ui-logo>
   </div>
 
-  <section class="step">
-    @if (welcomeStepActive()) {
-    <hgroup class="title-group">
-      <h1 class="title">Welkom bij Blocxy</h1>
-      <h2 class="subtitle">Verzamel, deel en beheer alles wat belangrijk is</h2>
-    </hgroup>
+  <hgroup class="title-group">
+    <h1 class="title">Welkom bij Blocxy!</h1>
+    <h2 class="subtitle">Vul je e-mailadres in om aan de slag te gaan</h2>
+  </hgroup>
 
-    <button class="btn-action">Ga aan de slag!</button>
-    }
-  </section>
+  <form class="form" [formGroup]="form" (submit)="signin()">
+    <div class="field">
+      <label for="email">E-mailadres</label>
+      <input
+        formControlName="email"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Jouw e-mailadres"
+      />
+    </div>
+
+    <button class="btn-action" type="submit">Ga aan de slag!</button>
+  </form>
 </div>
